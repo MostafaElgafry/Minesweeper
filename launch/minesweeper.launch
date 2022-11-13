@@ -1,0 +1,14 @@
+<launch>
+
+<include file="$(find teleop_twist_joy)/launch/teleop.launch" />
+<node pkg="minesweeper" type="control_motors.py" name="control_motors_node"/>
+
+<node pkg="minesweeper" type="rotary_encoders.py" name="rotary_encoders_node"/>
+
+<node pkg="minesweeper" type="tcp_server.py" name="tcp_server_node" />
+<node pkg="minesweeper" type="manual_arm.py" name="manual_arm_node"/>
+<node pkg="minesweeper" type="mine_detector.py" name="mine_detector_node"/>
+<node pkg="minesweeper" type="map_generator.py" name="map_generator_node"/>
+<node pkg="minesweeper" type="auto_arm.py" name="auto_arm_node"/>
+</launch>
+
